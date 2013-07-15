@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	background-image: url(../images/gradient-bg.jpg);
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	background-color: #000;
+}
+
+
+#container {
+	width: 1259px;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+#content {
+	position: static;
+	padding-top: 180px;
+	padding-left: 80px;
+	height: 500px;
+	width: 905px;
+	background-image: url(../images/box.png);
+	background-position: 80px 175px;
+	background-repeat: no-repeat;
+}
+#text {
+	padding: 25px;
+	height: 350px;
+	width: 350px;
+	font-size: small;
+	text-align: justify;
+	float: right;
+	top: auto;
+}
+#footer {
+	width: 1259px;
+}
+#reflection {
+	float: left;
+	padding-top: 10px;
+}
+#image {
+	float: left;
+}
+#divider {
+	margin-left: 25px;
+}
+h1 {
+	font-size: medium;
+	text-decoration: none;
+}
