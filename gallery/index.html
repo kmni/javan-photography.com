@@ -6,6 +6,10 @@
 <script type="text/javascript" src="../js/prototype.js"></script>
 <script type="text/javascript" src="../js/scriptaculous.js?load=effects,builder"></script>
 <script type="text/javascript" src="../js/lightbox.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/masonry.js"></script>
+<script type="text/javascript" src="../js/jquery.tn3.min.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/tn3/tn3.css">
 <!-- InstanceEndEditable -->
 <META http-equiv=Content-Type content="text/html; charset=iso-8859-1" />
 <SCRIPT language="JavaScript" type="text/javascript">
@@ -144,6 +148,87 @@ a:active {
 	height:115px;
 	z-index:1;
 }
+
+  a img {
+    border: none;
+  }
+  .masonry-galleries {
+    margin-left: -10px;
+    overflow: hidden;
+    width: 355px;
+  }
+  .masonry-galleries .gallery {
+    background-color: #2b2b2b;
+    box-shadow: rgba(0,0,0, 0.75) 0 0 5px;
+    color: #fff;
+    display: block;
+    float: left;
+    margin: 5px 0 10px 10px;
+    padding: 10px 10px;
+    width: 145px;
+  }
+  .masonry-galleries .gallery:hover {
+    background-color: #3b3b3b;
+    box-shadow: rgba(0,126,167, 0.75) 0 0 5px;
+  }
+  .masonry-galleries .gallery .image {
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 145px;
+  }
+  .masonry-galleries .gallery .image .count {
+    background: transparent url("../images/galleries-count.png") no-repeat right bottom;
+    bottom: 0;
+    color: #000;
+    display: block;
+    font-weight: 700;
+    height: 15px;
+    padding: 25px 5px 0 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 37px;
+  }
+  .masonry-galleries .gallery .image img {
+    height: auto;
+    width: 145px;
+  }
+  .masonry-galleries .gallery .text {
+    display: block;
+    padding-top: 10px;
+  }
+  .tn3-gallery {
+    box-shadow: rgba(0,0,0, 0.8) 0 0 10px;
+  }
+  .tn3-show-albums {
+    display: none;
+  }
+  .tn3-thumbs {
+    width: 466px;
+  }
+  .tn3-next-page {
+    right: 50px;
+  }
+  .mygallery {
+    left: -1000px;
+    position: absolute;
+    top: -1000px;
+  }
+  .mygallery.visible {
+    left: 50%;
+    margin: -213px auto auto -310px;
+    top: 50%;
+    z-index: 20;
+  }
+  .gallery-overlay {
+    background-color: rgba(0,0,0, 0.9);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+  }
 </STYLE>
 
 <META content="MSHTML 6.00.6000.16825" name=GENERATOR />
@@ -161,160 +246,747 @@ a:active {
   </div>
       <div id="text" style="height:335px;width:345px;overflow:auto">
         <p><strong>Gallery</strong></p>
-        <p><br>
-          <table border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td>
-                <a href="../photos/gallery/horses/horses-01.jpg" rel="lightbox[horses]" title="Horses"><img src="../photos/gallery/thumb-horses.jpg" alt="" width="100" height="100" hspace="6" border="0"></a>
-                <a href="../photos/gallery/horses/horses-02.jpg" rel="lightbox[horses]" title="Horses"></a> 
-                <a href="../photos/gallery/horses/horses-03.jpg" rel="lightbox[horses]" title="Horses"></a> 
-                <a href="../photos/gallery/horses/horses-04.jpg" rel="lightbox[horses]" title="Horses"></a> 
-                <a href="../photos/gallery/horses/horses-05.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-06.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-07.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-08.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-09.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-10.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-11.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-12.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-13.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-14.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-15.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-16.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-17.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-18.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-19.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-20.jpg" rel="lightbox[horses]" title="Horses"></a>
-                <a href="../photos/gallery/horses/horses-21.jpg" rel="lightbox[horses]" title="Horses"></a>
-                </td>
-              <td>HORSES</td>
-            </tr>
-            <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>
-              <a href="../photos/gallery/personalitites/personalities-04.jpg" rel="lightbox[personalities]" title="Personalities">
-                <img src="../photos/gallery/thumb-personalities.jpg" alt="" width="100" height="100" hspace="6" border="0">
-              </a> 
-              <a href="../photos/gallery/personalitites/personalities-11.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-05.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-06.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-07.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-08.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-09.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-10.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-01.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-12.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-13.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-14.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-16.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-17.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-18.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-19.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-20.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-21.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-22.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-23.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-24.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-25.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-26.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-27.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-28.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-29.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-30.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-31.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-32.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-33.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-34.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-35.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-36.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-37.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-38.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-39.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-40.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-41.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-42.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-43.jpg" rel="lightbox[personalities]" title="Personalities"></a> 
-              <a href="../photos/gallery/personalitites/personalities-44.jpg" rel="lightbox[personalities]" title="Personalities"></a>
-              </td>
-<td>PERSONALITIES</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td><a href="../photos/gallery/moments/moments-01.jpg" rel="lightbox[moments]" title="Moments"><img src="../photos/gallery/thumb-moments2.jpg" width="100" height="100" border="0"></a> <a href="../photos/gallery/moments/moments-01.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-02.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-03.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-04.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-05.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-06.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-07.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-08.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-09.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-10.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-11.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-12.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-13.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-14.jpg" rel="lightbox[moments]" title="Moments"></a> <a href="../photos/gallery/moments/moments-16.jpg" rel="lightbox[moments]" title="Moments"></a></td>
-<td>MOMENTS</td>
-</tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>
-<a href="../photos/gallery/performance/performance-01.jpg" rel="lightbox[performance]" title="Performance"><img src="../photos/gallery/performance/performance-thumb.jpg" alt="" width="100" height="100" hspace="6" border="0"></a>
-<a href="../photos/gallery/performance/performance-02.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-03.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-04.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-05.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-06.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-07.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-08.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-09.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-10.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-11.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-12.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-13.jpg" rel="lightbox[performance]" title="Performance"></a>
-<a href="../photos/gallery/performance/performance-14.jpg" rel="lightbox[performance]" title="Performance"></a>
-                
-                </td>
-              <td>PERFORMANCE</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>
-                <a href="../photos/gallery/halter/01.jpg" rel="lightbox[halter]" title="Halter"><img src="../photos/gallery/halter/halter-thumb.jpg" width="100" height="100" border="0"></a>
-                <a href="../photos/gallery/halter/02.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/03.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/04.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/05.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/06.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/07.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/08.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/09.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/10.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/11.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/12.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/13.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/14.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/15.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/16.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/17.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/18.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/19.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/20.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/21.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/22.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/23.jpg" rel="lightbox[halter]" title="Halter"></a>
-                <a href="../photos/gallery/halter/24.jpg" rel="lightbox[halter]" title="Halter"></a>
-                
-                </td>
-              <td>HALTER</td>
-            </tr>
-          </table>
+        <div class="masonry-galleries">
+          <a href="#horses-gallery" class="gallery">
+            <span class="image">
+              <img src="../photos/gallery/thumb-horses.jpg" alt="">
+              <span class="count">21</span>
+            </span><!-- .image -->
+            <span class="text">
+              Horses
+            </span><!-- .text -->
+          </a><!-- .gallery -->
+
+          <a href="#personalities-gallery" class="gallery">
+            <span class="image">
+              <img src="../photos/gallery/thumb-personalities.jpg" alt="">
+              <span class="count">41</span>
+            </span><!-- .image -->
+            <span class="text">
+              Personalities
+            </span><!-- .text -->
+          </a><!-- .gallery -->
+
+          <a href="#moments-gallery" class="gallery">
+            <span class="image">
+              <img src="../photos/gallery/thumb-moments2.jpg" alt="">
+              <span class="count">16</span>
+            </span><!-- .image -->
+            <span class="text">
+              Moments
+            </span><!-- .text -->
+          </a><!-- .gallery -->
+
+          <a href="#performance-gallery" class="gallery">
+            <span class="image">
+              <img src="../photos/gallery/performance/performance-thumb.jpg" alt="">
+              <span class="count">14</span>
+            </span><!-- .image -->
+            <span class="text">
+              Performance
+            </span><!-- .text -->
+          </a><!-- .gallery -->
+
+          <a href="#halter-gallery" class="gallery">
+            <span class="image">
+              <img src="../photos/gallery/halter/halter-thumb.jpg" alt="">
+              <span class="count">23</span>
+            </span><!-- .image -->
+            <span class="text">
+              Halter
+            </span><!-- .text -->
+          </a><!-- .gallery -->
+        </div><!-- .masonry-galleries -->
       </div>
       <div id="reflection">
         <img src="../photos/biography/javan-photo-reflection.png" width="475" height="137" />
-        
+
       </div>
     </div>
   <!-- InstanceEndEditable --> </div>
+
+<div class="mygallery" id="horses-gallery">
+  <ol>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-01.jpg">
+        <img src="../photos/gallery/horses/horses-01_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-02.jpg">
+        <img src="../photos/gallery/horses/horses-02_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-03.jpg">
+        <img src="../photos/gallery/horses/horses-03_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-04.jpg">
+        <img src="../photos/gallery/horses/horses-04_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-05.jpg">
+        <img src="../photos/gallery/horses/horses-05_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-06.jpg">
+        <img src="../photos/gallery/horses/horses-06_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-07.jpg">
+        <img src="../photos/gallery/horses/horses-07_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-08.jpg">
+        <img src="../photos/gallery/horses/horses-08_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-09.jpg">
+        <img src="../photos/gallery/horses/horses-09_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-10.jpg">
+        <img src="../photos/gallery/horses/horses-10_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-11.jpg">
+        <img src="../photos/gallery/horses/horses-11_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-12.jpg">
+        <img src="../photos/gallery/horses/horses-12_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-13.jpg">
+        <img src="../photos/gallery/horses/horses-13_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-14.jpg">
+        <img src="../photos/gallery/horses/horses-14_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-15.jpg">
+        <img src="../photos/gallery/horses/horses-15_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-16.jpg">
+        <img src="../photos/gallery/horses/horses-16_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-17.jpg">
+        <img src="../photos/gallery/horses/horses-17_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-18.jpg">
+        <img src="../photos/gallery/horses/horses-18_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-19.jpg">
+        <img src="../photos/gallery/horses/horses-19_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-20.jpg">
+        <img src="../photos/gallery/horses/horses-20_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Horses</h4>
+      <a href="../photos/gallery/horses/horses-21.jpg">
+        <img src="../photos/gallery/horses/horses-21_resize.jpg" />
+      </a>
+    </li>
+  </ol>
+</div>
+<div class="mygallery" id="personalities-gallery">
+  <ol>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-01.jpg">
+        <img src="../photos/gallery/personalitites/personalities-01_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-04.jpg">
+        <img src="../photos/gallery/personalitites/personalities-04_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-05.jpg">
+        <img src="../photos/gallery/personalitites/personalities-05_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-06.jpg">
+        <img src="../photos/gallery/personalitites/personalities-06_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-07.jpg">
+        <img src="../photos/gallery/personalitites/personalities-07_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-08.jpg">
+        <img src="../photos/gallery/personalitites/personalities-08_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-09.jpg">
+        <img src="../photos/gallery/personalitites/personalities-09_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-10.jpg">
+        <img src="../photos/gallery/personalitites/personalities-10_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-11.jpg">
+        <img src="../photos/gallery/personalitites/personalities-11_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-12.jpg">
+        <img src="../photos/gallery/personalitites/personalities-12_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-13.jpg">
+        <img src="../photos/gallery/personalitites/personalities-13_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-14.jpg">
+        <img src="../photos/gallery/personalitites/personalities-14_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-16.jpg">
+        <img src="../photos/gallery/personalitites/personalities-16_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-17.jpg">
+        <img src="../photos/gallery/personalitites/personalities-17_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-18.jpg">
+        <img src="../photos/gallery/personalitites/personalities-18_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-19.jpg">
+        <img src="../photos/gallery/personalitites/personalities-19_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-20.jpg">
+        <img src="../photos/gallery/personalitites/personalities-20_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-21.jpg">
+        <img src="../photos/gallery/personalitites/personalities-21_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-22.jpg">
+        <img src="../photos/gallery/personalitites/personalities-22_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-23.jpg">
+        <img src="../photos/gallery/personalitites/personalities-23_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-24.jpg">
+        <img src="../photos/gallery/personalitites/personalities-24_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-25.jpg">
+        <img src="../photos/gallery/personalitites/personalities-25_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-26.jpg">
+        <img src="../photos/gallery/personalitites/personalities-26_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-27.jpg">
+        <img src="../photos/gallery/personalitites/personalities-27_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-28.jpg">
+        <img src="../photos/gallery/personalitites/personalities-28_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-29.jpg">
+        <img src="../photos/gallery/personalitites/personalities-29_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-30.jpg">
+        <img src="../photos/gallery/personalitites/personalities-30_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-31.jpg">
+        <img src="../photos/gallery/personalitites/personalities-31_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-32.jpg">
+        <img src="../photos/gallery/personalitites/personalities-32_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-33.jpg">
+        <img src="../photos/gallery/personalitites/personalities-33_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-34.jpg">
+        <img src="../photos/gallery/personalitites/personalities-34_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-35.jpg">
+        <img src="../photos/gallery/personalitites/personalities-35_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-36.jpg">
+        <img src="../photos/gallery/personalitites/personalities-36_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-37.jpg">
+        <img src="../photos/gallery/personalitites/personalities-37_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-38.jpg">
+        <img src="../photos/gallery/personalitites/personalities-38_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-39.jpg">
+        <img src="../photos/gallery/personalitites/personalities-39_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-40.jpg">
+        <img src="../photos/gallery/personalitites/personalities-40_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-41.jpg">
+        <img src="../photos/gallery/personalitites/personalities-41_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-42.jpg">
+        <img src="../photos/gallery/personalitites/personalities-42_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-43.jpg">
+        <img src="../photos/gallery/personalitites/personalities-43_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Personalities</h4>
+      <a href="../photos/gallery/personalitites/personalities-44.jpg">
+        <img src="../photos/gallery/personalitites/personalities-44_resize.jpg" />
+      </a>
+    </li>
+  </ol>
+</div>
+<div class="mygallery" id="moments-gallery">
+  <ol>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-01.jpg">
+        <img src="../photos/gallery/moments/moments-01_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-04.jpg">
+        <img src="../photos/gallery/moments/moments-04_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-05.jpg">
+        <img src="../photos/gallery/moments/moments-05_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-06.jpg">
+        <img src="../photos/gallery/moments/moments-06_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-07.jpg">
+        <img src="../photos/gallery/moments/moments-07_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-08.jpg">
+        <img src="../photos/gallery/moments/moments-08_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-09.jpg">
+        <img src="../photos/gallery/moments/moments-09_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-10.jpg">
+        <img src="../photos/gallery/moments/moments-10_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-11.jpg">
+        <img src="../photos/gallery/moments/moments-11_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-12.jpg">
+        <img src="../photos/gallery/moments/moments-12_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-13.jpg">
+        <img src="../photos/gallery/moments/moments-13_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-14.jpg">
+        <img src="../photos/gallery/moments/moments-14_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Moments</h4>
+      <a href="../photos/gallery/moments/moments-16.jpg">
+        <img src="../photos/gallery/moments/moments-16_resize.jpg" />
+      </a>
+    </li>
+  </ol>
+</div>
+<div class="mygallery" id="performance-gallery">
+  <ol>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-01.jpg">
+        <img src="../photos/gallery/performance/performance-01_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-04.jpg">
+        <img src="../photos/gallery/performance/performance-04_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-05.jpg">
+        <img src="../photos/gallery/performance/performance-05_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-06.jpg">
+        <img src="../photos/gallery/performance/performance-06_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-07.jpg">
+        <img src="../photos/gallery/performance/performance-07_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-08.jpg">
+        <img src="../photos/gallery/performance/performance-08_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-09.jpg">
+        <img src="../photos/gallery/performance/performance-09_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-10.jpg">
+        <img src="../photos/gallery/performance/performance-10_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-11.jpg">
+        <img src="../photos/gallery/performance/performance-11_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-12.jpg">
+        <img src="../photos/gallery/performance/performance-12_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-13.jpg">
+        <img src="../photos/gallery/performance/performance-13_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Performance</h4>
+      <a href="../photos/gallery/performance/performance-14.jpg">
+        <img src="../photos/gallery/performance/performance-14_resize.jpg" />
+      </a>
+    </li>
+  </ol>
+</div>
+<div class="mygallery" id="halter-gallery">
+  <ol>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-01.jpg">
+        <img src="../photos/gallery/halter/halter-01_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-02.jpg">
+        <img src="../photos/gallery/halter/halter-02_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-03.jpg">
+        <img src="../photos/gallery/halter/halter-03_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-04.jpg">
+        <img src="../photos/gallery/halter/halter-04_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-05.jpg">
+        <img src="../photos/gallery/halter/halter-05_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-06.jpg">
+        <img src="../photos/gallery/halter/halter-06_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-07.jpg">
+        <img src="../photos/gallery/halter/halter-07_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-08.jpg">
+        <img src="../photos/gallery/halter/halter-08_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-09.jpg">
+        <img src="../photos/gallery/halter/halter-09_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-10.jpg">
+        <img src="../photos/gallery/halter/halter-10_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-11.jpg">
+        <img src="../photos/gallery/halter/halter-11_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-12.jpg">
+        <img src="../photos/gallery/halter/halter-12_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-13.jpg">
+        <img src="../photos/gallery/halter/halter-13_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-14.jpg">
+        <img src="../photos/gallery/halter/halter-14_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-15.jpg">
+        <img src="../photos/gallery/halter/halter-15_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-16.jpg">
+        <img src="../photos/gallery/halter/halter-16_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-17.jpg">
+        <img src="../photos/gallery/halter/halter-17_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-18.jpg">
+        <img src="../photos/gallery/halter/halter-18_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-19.jpg">
+        <img src="../photos/gallery/halter/halter-19_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-20.jpg">
+        <img src="../photos/gallery/halter/halter-20_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-21.jpg">
+        <img src="../photos/gallery/halter/halter-21_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-22.jpg">
+        <img src="../photos/gallery/halter/halter-22_resize.jpg" />
+      </a>
+    </li>
+    <li>
+      <h4>Halter</h4>
+      <a href="../photos/gallery/halter/halter-23.jpg">
+        <img src="../photos/gallery/halter/halter-23_resize.jpg" />
+      </a>
+    </li>
+  </ol>
+</div>
+<div class="gallery-overlay"></div>
+
 <DIV id=footer-div>
   <table width="1259" border="0" cellpadding="0" cellspacing="0">
     <tr>
@@ -349,9 +1021,65 @@ a:active {
 <!--
 swfobject.registerObject("FlashID");
 //-->
+
         </script>
       <!-- InstanceEndEditable --></td>
     </tr>
   </table>
 </DIV>
+
+<!--  initialize the TN3 when the DOM is ready -->
+<script type="text/javascript">
+  $j = jQuery.noConflict();
+
+  function ClosePopUpWindow () {
+    $j('.gallery-overlay').hide();
+    $j('.mygallery').removeClass('visible');
+    return false;
+  }
+
+  $j(window).load(function(){
+    $j(".masonry-galleries").masonry();
+  });
+	$j(document).ready(function() {
+
+    $j(".gallery-overlay").on("click", ClosePopUpWindow);
+
+    $j("a.gallery").on("click", function(){
+      var id = $j(this).attr("href").replace("#", "");
+      $j(".mygallery").removeClass("visible");
+      $j("#" + id).addClass("visible");
+      $j(".gallery-overlay").show();
+      return false;
+    });
+
+		var tn1 = $j('.mygallery').tn3({
+      startWithAlbums: false,
+		    imageClick:"fullscreen",
+        skinDir: "/css",
+		    image:{
+			maxZoom:1.5,
+			crop:true,
+			clickEvent:"dblclick",
+			transitions:[{
+			    type:"blinds"
+			},{
+			    type:"grid"
+			},{
+			    type:"grid",
+			    duration:460,
+			    gridX:1,
+			    gridY:8,
+			    sort:"random",
+			    method:"scale",
+			    partDuration:360
+			}]
+		    },
+		    thumbnailer: {
+			overMove: false
+		    }
+		});
+	});
+</script>
+
 </BODY><!-- InstanceEnd --></HTML>
